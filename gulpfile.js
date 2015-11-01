@@ -28,7 +28,7 @@ gulp.task('connect', function() {
 
 gulp.task('scripts.app', function() {
     gulp.src(appPaths)
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/wheel-selector'));
 });
 
 gulp.task('scripts.templates', function() {
@@ -47,7 +47,7 @@ gulp.task('scripts.stylesheets', function() {
             errLogToConsole: true
           } ) )
         .pipe( csso() )
-        .pipe( gulp.dest('polygon/css/') );
+        .pipe( gulp.dest('dist/wheel-selector') );
 });
 
 gulp.task('build', [
