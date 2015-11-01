@@ -1,0 +1,21 @@
+{
+  "name": "wheel-selector",
+  "description": "jQuery plugin that creates cool selector",
+  "main": "index.js",
+  "authors": [
+    "Volodymyr Lut <volodymyrgalan@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/volodymyrlut/wheel-selector",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
