@@ -37,8 +37,7 @@ $.fn.wheelSelector = function(options){
     return html;
   };
   this.html(generateTemplate());
-  var wheel_selector_data = {
-  };
+  var wheel_selector_data = {};
   wheel_selector_data.scrollable_height = $(this).height();
   wheel_selector_data.block_height = $('.wheel-selector-list > li:first').height();
   var middle_element = Math.round(wheel_selector_data.scrollable_height / wheel_selector_data.block_height / 2);
@@ -62,5 +61,18 @@ $.fn.wheelSelector = function(options){
       lastScrollTop = st;
     }
   });
-
+  return {
+    getActiveElement: function(){
+      return wheel_selector_data.current_active
+    },
+    getCurrentValue: function(){
+      return wheel_selector_data.current_active.attr('data-wheelSelected');
+    },
+    getCurrentTitle: function(){
+      return wheel_selector_data.current_active.text();
+    },
+    getItems: function(){
+      return main_wheel_element.find('.wheel-selector-list-item'); 
+    }
+  }
 };
