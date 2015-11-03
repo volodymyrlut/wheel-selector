@@ -27,7 +27,7 @@
 //   });
 // });
 $.fn.wheelSelector = function(options){
-  this.css({overflow: 'scroll', height: options.height});
+  this.css({overflowY: 'scroll', height: options.height});
   var generateTemplate = function(){
     var html = "<ul class = 'wheel-selector-list'>";
     for(var i = 0, l = options.data.length; i < l; i++){
@@ -63,7 +63,7 @@ $.fn.wheelSelector = function(options){
   });
   return {
     getActiveElement: function(){
-      return wheel_selector_data.current_active
+      return wheel_selector_data.current_active;
     },
     getCurrentValue: function(){
       return wheel_selector_data.current_active.attr('data-wheelSelected');
